@@ -3,8 +3,6 @@
 This integration test simply runs the particle_in_field app and compares the output files
 to "good" output.
 """
-from abc import ABCMeta
-from turbopy.core import PhysicsModule
 import io
 
 def test_pif(pif_run):
