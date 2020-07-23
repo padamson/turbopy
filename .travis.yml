@@ -9,11 +9,11 @@ install:
     - hash -r
     - conda config --set always_yes yes --set changeps1 no
     - conda update -q conda
-      # Useful for debugging any issues with conda
+    # Useful for debugging any issues with conda
     - conda info -a
     - conda env create -f environment.yml
     - conda activate turbopy
-    - pip install codecov
+    #- pip install codecov
     - pip install -e .
     #- pip install pylint-exit
     - pip install anybadge
@@ -21,8 +21,8 @@ install:
 
 script:
     - pytest
-after_success:
-    - codecov # submit coverage
+      #after_success:
+      # - codecov # submit coverage
       # test
       # - pytest --cov=turbopy tests/ | tee pytest.txt
       # - score=$(cat pytest.txt | grep TOTAL | grep -o -P '[0-9]*(\.[0-9]*)?(?=%)')
